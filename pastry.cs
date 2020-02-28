@@ -8,40 +8,57 @@ namespace Pastries
         public string Name {get;set;}
         public int Cost {get;set;}
         public int Quantity {get;set;}
+        public int FinalQuantity {get;set;}
 
         public int TotalCost {get;set;}
 
-        public Bread ()
+        public int FreeBread {get;set;}
+
+        public int OrderedQuantity {get;set;}
+
+        public Bread()
         {
             Name = "Pierre's Bread";
-            Quantity = 1;
-            Cost = 3;
-            TotalCost = (Quantity * Cost);
+            OrderedQuantity = 1;
+            Cost = 5;
+            FinalQuantity = 0;
+            TotalCost = 0;
+            FreeBread = 0;
+        }
 
+        public void BreadQuantity()
+        {
+            FreeBread = (OrderedQuantity/2);
+            FinalQuantity = FreeBread +OrderedQuantity;
+        }
+
+        public void BreadCosts()
+        {
+            TotalCost = OrderedQuantity *Cost;
         }
         public void PrintBread()
         {
-            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {TotalCost}$s, Thank you.");
+            Console.WriteLine($"You ordered {Quantity} of {Name}. Thank you.");
+            Console.WriteLine($"sYour Total will be {TotalCost}, Because of our special you got {FinalQuantity} of {Name}");
         }
     }
 
-    public class Pastries
+    public class Pastry
     {
         public string Name {get;set;}
         public int Cost {get;set;}
         public int Quantity {get;set;}
 
-        public Pastries ()
+        public Pastry()
         {
             Name = "Pierre's Pastries";
             Quantity = 1;
-            Cost = 5;
-            TotalCost = (Quantity * Cost);
+            Cost = 2;
         }
 
         public void PrintPastries ()
         {
-            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {TotalCost}$s, Thank you ");
+            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {Cost}$s, Thank you ");
         }
     }
 }
