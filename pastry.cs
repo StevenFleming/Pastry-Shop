@@ -9,12 +9,16 @@ namespace Pastries
         public int Cost {get;set;}
         public int Quantity {get;set;}
 
-        public Bread (string name)
+        public Bread ()
         {
-            Name = name;
-            Cost = 3;
+            Name = "Pierre's Bread";
+            Cost = 3(Quantity);
             Quantity = 1;
 
+        }
+        public void PrintBread()
+        {
+            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {Cost} ");
         }
 
     }
@@ -25,13 +29,16 @@ namespace Pastries
         public int Cost {get;set;}
         public int Quantity {get;set;}
 
-        public Pastries (string name)
+        public Pastries ()
         {
-            Name = name;
-            Cost = 5;
+            Name = "Pierre's Pastries";
+            Cost = 5(Quantity);
             Quantity = 1;
-            
+        }
 
+        public void PrintPastries ()
+        {
+            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {Cost} ");
         }
     }
 }
