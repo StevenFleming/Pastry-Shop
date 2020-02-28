@@ -9,23 +9,20 @@ namespace Pastries
         public int Cost {get;set;}
         public int Quantity {get;set;}
 
+        public int TotalCost {get;set;}
+
         public Bread ()
         {
             Name = "Pierre's Bread";
             Quantity = 1;
             Cost = 3;
+            TotalCost = (Quantity * Cost);
 
         }
         public void PrintBread()
         {
-            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {Cost}$s, Thank you.");
+            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {TotalCost}$s, Thank you.");
         }
-
-        public int BreadCost()
-        {
-            return Cost * Quantity; 
-        }
-
     }
 
     public class Pastries
@@ -39,16 +36,12 @@ namespace Pastries
             Name = "Pierre's Pastries";
             Quantity = 1;
             Cost = 5;
+            TotalCost = (Quantity * Cost);
         }
 
         public void PrintPastries ()
         {
-            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {Cost}$s, Thank you ");
-        }
-
-        public int PastriesCost()
-        {
-            return Cost * Quantity; 
+            Console.WriteLine($" You ordered {Quantity} of {Name}. That will be {TotalCost}$s, Thank you ");
         }
     }
 }
