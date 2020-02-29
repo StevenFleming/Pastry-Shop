@@ -38,8 +38,10 @@ namespace Pastries
         }
         public void PrintBread()
         {
+            int seconds = 1000;
             Console.WriteLine($"You ordered {OrderedQuantity} of {Name}.Your SubTotal will be {TotalCost}");
-            Console.WriteLine($"Because of our special you got {FinalQuantity} of {Name}. Thats {FreeBread} extra loafs of Bread!");
+            Thread.Sleep(seconds);
+            Console.WriteLine($"Because of our special you got {FreeBread} extra loafs of Bread!");
         }
     }
 
@@ -76,8 +78,10 @@ namespace Pastries
 
         public void PrintPastries()
         {
-            Console.WriteLine($"You ordered {Quantity} of {Name}. That will be {TotalCost}$s, Thank you ");
-            Console.WriteLine($"Your Total will be {TotalCost}$, Because of our special you got {Quantity} {Name}sdot");
+            int seconds = 1000;
+            Console.WriteLine($"You ordered {Quantity} of {Name}. Your subtotal is {TotalCost}$s ");
+            Thread.Sleep(seconds);
+            Console.WriteLine($"You have {Quantity} {Name} in your cart");
         }
     }
 }

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using Pastries;
 using Orders;
 
-public class Program
+namespace Main 
 {
-    public static void Main ()
+    public class Program
     {
-        CustomerOrder.AskOrder();
+        public static void Main ()
+        {
+            CustomerOrder.AskOrder();
+        }
     }
 }
