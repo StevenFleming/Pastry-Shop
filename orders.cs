@@ -35,7 +35,6 @@ namespace Orders
             Console.WriteLine($" Your total will be {firstBread.TotalCost + firstPastries.TotalCost}$s ");
             Console.WriteLine("If you are done with your order type exit if you would like to edit your cart enter anything else");
             string quitprogram = Console.ReadLine().ToLower();
-            
             if (quitprogram== "exit")
             {
             System.Environment.Exit(0);
