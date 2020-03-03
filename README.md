@@ -1,4 +1,4 @@
-# _Doctor Lookup_
+# _Pierre's Bakery_
 
 #### _Use this app to buy Pastry's and Bread for Pierre's Bakery: 2020_
 
